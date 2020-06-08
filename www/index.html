@@ -7,69 +7,7 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
-    <script type="text/javascript">
-    //問題と解答
-    qa = new Array();
-      qa[0] = ["このキャラクターの名前は何でしょう？", "トトロ", "ポムポムプリン", "ボムボムヨーグルト", 2];
-      qa[1] = ["このキャラクターの名前は何でしょう？","ミルク", "シナモン", "ココア", 2];
-      qa[2] = ["このキャラクターの名前は何でしょう？","けろけろけろっぱ", "けろけろけろっぺ", "けろけろけろっぴ", 3];
-      qa[3] = ["このキャラクターの名前は何でしょう？", "きりみちゃん", "さかなちゃん", "さしみちゃん", 1];
-      qa[4] = ["このキャラクターの名前は何でしょう？", "アグレッシブ烈子", "テンション高子", "マダガスカル由美子", 1];
-
-      //初期設定
-      q_sel = 3; //選択肢の数
-
-      setReady();
-
-    //初期設定
-    function setReady() {
-      count = 0; //問題番号
-      ansers = new Array(); //解答記録
-	
-      //最初の問題
-      quiz();
-    }
-
-    //問題表示
-    function quiz() {
-      //問題
-      document.getElementById("text_q").innerHTML = (count + 1) + "問目：" + qa[count][0];
-
-      //選択肢
-      s = "";
-      for (n=1;n<=q_sel;n++) {
-        s += "【<a href='javascript:anser(" + n + ")'>" + n + "：" + qa[count][n] + "</a>】";
-      }
-      document.getElementById("text_s").innerHTML = s;
-    }
-
-    function anser(num) {
-      var s;
-      s = (count + 1) + "問目：";
-      //答え合わせ
-      if (num == qa[count][q_sel + 1]) {
-        //正解
-        s += "○" + qa[count][num];
-        ansers[count] = "○";
-      } else {
-        s += "×" + qa[count][num];
-        ansers[count] = "×";
-      }
-      document.getElementById("text_a").innerHTML = s;
-
-      //次の問題を表示
-      count++;
-      if (count < qa.length) {
-        quiz();
-      } else {
-        document.getElementById("text_q").innerHTML = "";
-		    document.getElementById("text_s").innerHTML = "";
-	    }
-}
-
-
-      
-      
+    <script>
     </script>
 </head>
 <body>
