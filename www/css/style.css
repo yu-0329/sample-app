@@ -1,0 +1,31 @@
+/**/
+body {
+  background: rgb(204, 240, 255);
+}
+
+.name {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 150px;
+}
+
+.resizeimage img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+.content {
+  text-align: center;
+}
+
+#start {
+  margin-top: 100px;
+  padding: 20px;
+  
+}
+
+#push-button {
+  margin-top: 100px;
+  padding: 20px;
+  
+}
