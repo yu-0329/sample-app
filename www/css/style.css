@@ -127,3 +127,15 @@ body {
   display: block;
   text-decoration: none;
 }
+
+#question_image {
+    width: 50%;
+    height: auto;
+    
+  }
+
+#top_btn {
+  margin-top: 500px;
+  
+}
+
