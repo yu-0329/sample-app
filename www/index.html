@@ -8,7 +8,37 @@
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <script>
-      
+      "use strict";
+      var btn_close = {
+          code:   "var btn=document.createElement('button');" +
+                  "btn.style.cssText='position:fixed;color:#fff;background-color:rgba(43,97,143,0.5);font-size:12px;font-weight:800;width:48px;height:48px;bottom:16px;right:16px;border:none;border-radius:50%;box-shadow:2px 2px 1px rgba(48,48,48,0.5);z-index:999;';" +
+                  "var t=document.createTextNode('close');" +
+                  "btn.appendChild(t);" +
+                  "btn.addEventListener('click', function(e) {" +
+                  "window.open('about:blank');" +
+                  "}, false);" +
+                  "document.body.appendChild(btn);"
+      };
+      window.addEventListener("load", function(e) {
+      console.log("load");
+          var elem = document.getElementById("push_button");
+          elem.addEventListener("click", function(e) {
+      console.log("click button");
+              var ref = window.open("https://www.sanrio.co.jp/characterindex/", "_blank", "location=no");
+              ref.addEventListener("loadstop", function(e) {
+      console.log("loadstop " + e.url);
+                  if (e.url.search(/about:blank/) > -1) {
+                      ref.close();
+                  } else {
+                      ref.executeScript(btn_close);
+                  }
+              }, false);
+              ref.addEventListener("exit", function(e) {
+      console.log("exit");
+                  alert("close browser");
+              });
+          }, false);
+      }, false);
     </script>
 </head>
 <body>
@@ -26,7 +56,7 @@
     <a href="quiz3.html" id="difficult" class="start" style="text-decoration: none;">上級</a>
     <a href="https://www.sanrio.co.jp/characterindex/" id="push_button" style="text-decoration: none;">キャラクター一覧</a>
     
-
+    
   </section>
 
   <!-- <div class="btn">
