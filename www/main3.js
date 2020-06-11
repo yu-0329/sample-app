@@ -13,10 +13,10 @@
     {q: 'このキャラクターの名前は何でしょう？', i: '../image/', c: ['リズムくん', 'オンプくん', 'メロディくん']},
     {q: 'このキャラクターの名前は何でしょう？', i: '../image/', c: ['みるく', 'シナモン', 'シフォン']},
     {q: 'このキャラクターの名前は何でしょう？', i: '../image/', c: ['カプチーノ', 'モカ', 'エスプレッソ']},
-    {q: 'このキャラクターの名前は何でしょう？', i: '../image/', c: ['たくわんわん', '', '']},
+    {q: 'このキャラクターの名前は何でしょう？', i: '../image/', c: ['たくわんわん', 'かまぼこちゃん', 'きりみちゃん']},
     {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['けろりーぬ', 'けろりんりん', 'けろりんちょ']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['マフィン', '', '']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['マカロン', '', '']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['マフィン', 'タルト', 'カスタード']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['マカロン', 'ポムポムプリン', 'クッキー']},
     {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['ミント', 'ハーブ', 'けろけろけろっぴ']},
     {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['さゆりちゃん', 'たこみちゃん', 'たこえもん']},
     {q: 'このキャラクターの名前は何でしょう？', i:'../image/pochi.PNG', c: ['ポチ', 'ワニ', 'タマ']},
@@ -86,33 +86,33 @@
     
   
     if (currentNum === 4) {
-      const scoreLabel = document.getElementById('aaa');
+      const scoreLabel = document.getElementById('aaa3');
       result3.classList.remove('hidden');
       // let total = Math.floor(score / quizSet.length * 100);
       let total = Math.floor(score / (quizSet3.length / 2) * 100);
       scoreLabel.textContent = total;
-      const scoreComments = document.getElementById('score_comments');
-      const img = document.getElementById('score_image');
+      const scoreComments3 = document.getElementById('score_comments3');
+      const img = document.getElementById('score_image3');
       if (total === 100) {
-        scoreComments.textContent = 'おめでとう！';
+        scoreComments3.textContent = 'おめでとう！';
         img.src = "../image/tensai.png";
-        img.classList.remove('score_image');
-        setTimeout(() => img.classList.add('score_image'))
+        img.classList.remove('score_image3');
+        setTimeout(() => img.classList.add('score_image3'))
       } else if (total === 80 || total === 90) {
-        scoreComments.textContent = '惜しい！あと少し！';
+        scoreComments3.textContent = '惜しい！あと少し！';
         img.src = "../image/oshii.png";
-        img.classList.remove('score_image');
-        setTimeout(() => img.classList.add('score_image'))
+        img.classList.remove('score_image3');
+        setTimeout(() => img.classList.add('score_image3'))
       } else if (total === 60 || total === 70) {
-        scoreComments.textContent = 'まあまあかな！';
+        scoreComments3.textContent = 'まあまあかな！';
         img.src = "../image/bee.png";
-        img.classList.remove('score_image');
-        setTimeout(() => img.classList.add('score_image'))
+        img.classList.remove('score_image3');
+        setTimeout(() => img.classList.add('score_image3'))
       } else {
-        scoreComments.textContent = 'まだまだだね';
+        scoreComments3.textContent = 'まだまだだね';
         img.src = "../image/guruguru.png";
-        img.classList.remove('score_image');
-        setTimeout(() => img.classList.add('score_image'))
+        img.classList.remove('score_image3');
+        setTimeout(() => img.classList.add('score_image3'))
       }
     } else {
       currentNum++;
