@@ -118,22 +118,22 @@
       const img2 = document.getElementById('score_image2');
       if (total === 100) {
         scoreComments2.textContent = 'おめでとう！';
-        img2.src = "image/tensai.png";
+        img2.src = "image/toutoi.png";
         img2.classList.remove('score_image2');
         setTimeout(() => img2.classList.add('score_image2'))
       } else if (total === 80 || total === 90) {
         scoreComments2.textContent = '惜しい！あと少し！';
-        img2.src = "image/oshii.png";
+        img2.src = "image/risu.png";
         img2.classList.remove('score_image2');
         setTimeout(() => img2.classList.add('score_image2'))
       } else if (total === 60 || total === 70) {
         scoreComments2.textContent = 'まあまあかな！';
-        img2.src = "image/bee.png";
+        img2.src = "image/good.png";
         img2.classList.remove('score_image2');
         setTimeout(() => img2.classList.add('score_image2'))
       } else {
         scoreComments2.textContent = 'まだまだだね';
-        img2.src = "image/guruguru.png";
+        img2.src = "image/dame.png";
         img2.classList.remove('score_image2');
         setTimeout(() => img2.classList.add('score_image2'))
       }
