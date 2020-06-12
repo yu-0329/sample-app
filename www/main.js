@@ -52,14 +52,19 @@
       score++;
       btn.classList.remove('disabled');
       alert("正解！");
+      currentNum++;
+      setQuiz();
     } else {
       li.classList.add();
       btn.classList.remove('disabled');
       const currentNumQuiz = quizSet[currentNum].c[0];
       alert("残念！\n正解は(" + currentNumQuiz + ")です。");
+      currentNum++;
+      setQuiz();
     }
-
+    
     btn.classList.remove('disabled');
+    
   }
 
   function setQuiz() {
