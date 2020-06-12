@@ -6,22 +6,24 @@
   const questionImage = document.getElementById('question_image');
   const choices = document.getElementById('choices');
   const btn = document.getElementById('btn');
+  const next = document.getElementById('next');
   const result = document.getElementById('result');
+  const modal = document.getElementById('modal');
   // const scoreLabel = document.querySelector('#result > p');
   
 
   const quizSet = shuffle([
-    {q: 'このキャラクターの名前は何でしょう？', i: '../image/83067137.png', c: ['ポムポムプリン', 'トトロ', 'ボムボムヨーグルト']},
-    {q: 'このキャラクターの名前は何でしょう？', i: '../image/shinamon.png', c: ['シナモン', 'ココア', 'ミルク']},
-    {q: 'このキャラクターの名前は何でしょう？', i: '../image/kero.jpg', c: ['けろけろけろっぴ', 'けろけろけろっぺ', 'けろけろけろっぱ']},
-    {q: 'このキャラクターの名前は何でしょう？', i: '../image/kirimi.png', c: ['きりみちゃん', 'さかなちゃん', 'さしみちゃん']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/hello.png', c: ['ハローキティ', 'けろけろけろっぴ', 'ポムポムプリン']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/batumaru.jpg', c: ['バッドばつ丸', 'グッドばつ丸', 'グッドはな丸']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/mymelody.png', c: ['マイメロディ', 'ピアノちゃん', 'メロディちゃん']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/gudetama.png', c: ['ぐでたま', 'ゆでたま', '目玉焼き']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/kikirara2.png', c: ['リトルツインスターズ', 'ぐでたま', 'シナモン']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/kuromi.png', c: ['クロミ', 'マイメロディ', 'ハローキティ']},
-    // {q: 'このキャラクターの名前は何でしょう？', i:'../image/pochi.PNG', c: ['ポチ', 'ワニ', 'タマ']},
+    {q: 'このキャラクターの名前は何でしょう？', i: 'image/83067137.png', c: ['ポムポムプリン', 'トトロ', 'ボムボムヨーグルト']},
+    {q: 'このキャラクターの名前は何でしょう？', i: 'image/shinamon.png', c: ['シナモン', 'ココア', 'ミルク']},
+    {q: 'このキャラクターの名前は何でしょう？', i: 'image/kero.jpg', c: ['けろけろけろっぴ', 'けろけろけろっぺ', 'けろけろけろっぱ']},
+    {q: 'このキャラクターの名前は何でしょう？', i: 'image/kirimi.png', c: ['きりみちゃん', 'さかなちゃん', 'さしみちゃん']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/hello.png', c: ['ハローキティ', 'けろけろけろっぴ', 'ポムポムプリン']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/batumaru.jpg', c: ['バッドばつ丸', 'グッドばつ丸', 'グッドはな丸']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/mymelo.PNG', c: ['マイメロディ', 'ピアノちゃん', 'メロディちゃん']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/gudetama.png', c: ['ぐでたま', 'ゆでたま', '目玉焼き']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/kikirara2.png', c: ['リトルツインスターズ', 'ぐでたま', 'シナモン']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/kuromi.png', c: ['クロミ', 'マイメロディ', 'ハローキティ']},
+    // {q: 'このキャラクターの名前は何でしょう？', i:'image/pochi.PNG', c: ['ポチ', 'ワニ', 'タマ']},
   ]);
 
   let currentNum = 0;
@@ -46,10 +48,15 @@
     isAnswered = true;
 
     if (li.textContent === quizSet[currentNum].c[0]) {
-      li.classList.add('correct');
+      li.classList.add();
       score++;
+      btn.classList.remove('disabled');
+      alert("正解！");
     } else {
-      li.classList.add('wrong');
+      li.classList.add();
+      btn.classList.remove('disabled');
+      const currentNumQuiz = quizSet[currentNum].c[0];
+      alert("残念！\n正解は(" + currentNumQuiz + ")です。");
     }
 
     btn.classList.remove('disabled');
@@ -87,7 +94,7 @@
       if (btn.classList.contains('disabled')) {
         return;
       }
-    btn.classList.add('disabled');
+    btn.classList.add('hidden');
     
   
     if (currentNum === 4) {
@@ -100,22 +107,22 @@
       const img = document.getElementById('score_image');
       if (total === 100) {
         scoreComments.textContent = 'おめでとう！';
-        img.src = "../image/tensai.png";
+        img.src = "image/tensai.png";
         img.classList.remove('score_image');
         setTimeout(() => img.classList.add('score_image'))
       } else if (total === 80 || total === 90) {
         scoreComments.textContent = '惜しい！あと少し！';
-        img.src = "../image/oshii.png";
+        img.src = "image/oshii.png";
         img.classList.remove('score_image');
         setTimeout(() => img.classList.add('score_image'))
       } else if (total === 60 || total === 70) {
         scoreComments.textContent = 'まあまあかな！';
-        img.src = "../image/bee.png";
+        img.src = "image/bee.png";
         img.classList.remove('score_image');
         setTimeout(() => img.classList.add('score_image'))
       } else {
         scoreComments.textContent = 'まだまだだね';
-        img.src = "../image/guruguru.png";
+        img.src = "image/guruguru.png";
         img.classList.remove('score_image');
         setTimeout(() => img.classList.add('score_image'))
       }

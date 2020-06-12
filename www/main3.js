@@ -10,16 +10,16 @@
   
 
   const quizSet3 = shuffle([
-    {q: 'このキャラクターの名前は何でしょう？', i: '../image/', c: ['リズムくん', 'オンプくん', 'メロディくん']},
-    {q: 'このキャラクターの名前は何でしょう？', i: '../image/', c: ['みるく', 'シナモン', 'シフォン']},
-    {q: 'このキャラクターの名前は何でしょう？', i: '../image/', c: ['カプチーノ', 'モカ', 'エスプレッソ']},
-    {q: 'このキャラクターの名前は何でしょう？', i: '../image/', c: ['たくわんわん', 'かまぼこちゃん', 'きりみちゃん']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['けろりーぬ', 'けろりんりん', 'けろりんちょ']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['マフィン', 'タルト', 'カスタード']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['マカロン', 'ポムポムプリン', 'クッキー']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['ミント', 'ハーブ', 'けろけろけろっぴ']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/', c: ['さゆりちゃん', 'たこみちゃん', 'たこえもん']},
-    {q: 'このキャラクターの名前は何でしょう？', i:'../image/pochi.PNG', c: ['ポチ', 'ワニ', 'タマ']},
+    {q: 'このキャラクターの名前は何でしょう？', i: 'image/rizumu2.PNG', c: ['リズムくん', 'オンプくん', 'メロディくん']},
+    {q: 'このキャラクターの名前は何でしょう？', i: 'image/milk.PNG', c: ['みるく', 'シナモン', 'シフォン']},
+    {q: 'このキャラクターの名前は何でしょう？', i: 'image/cap.PNG', c: ['カプチーノ', 'モカ', 'エスプレッソ']},
+    {q: 'このキャラクターの名前は何でしょう？', i: 'image/takuwan.PNG', c: ['たくわんわん', 'かまぼこちゃん', 'きりみちゃん']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/kerorinu.PNG', c: ['けろりーぬ', 'けろりんりん', 'けろりんちょ']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/mafin.PNG', c: ['マフィン', 'タルト', 'カスタード']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/macaron.PNG', c: ['マカロン', 'ポムポムプリン', 'クッキー']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/mint.PNG', c: ['ミント', 'ハーブ', 'けろけろけろっぴ']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/syr.PNG', c: ['さゆりちゃん', 'たこみちゃん', 'たこえもん']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/pochi.PNG', c: ['ポチ', 'ワニ', 'タマ']},
   ]);
 
   let currentNum = 0;
@@ -41,10 +41,13 @@
     isAnswered = true;
 
     if (li.textContent === quizSet3[currentNum].c[0]) {
-      li.classList.add('correct');
+      li.classList.add();
       score++;
+      alert("正解！");
     } else {
-      li.classList.add('wrong');
+      li.classList.add();
+      const currentNumQuiz = quizSet3[currentNum].c[0];
+      alert("残念！\n正解は(" + currentNumQuiz + ")です。");
     }
 
     btn3.classList.remove('disabled');
@@ -95,22 +98,22 @@
       const img = document.getElementById('score_image3');
       if (total === 100) {
         scoreComments3.textContent = 'おめでとう！';
-        img.src = "../image/tensai.png";
+        img.src = "image/tensai.png";
         img.classList.remove('score_image3');
         setTimeout(() => img.classList.add('score_image3'))
       } else if (total === 80 || total === 90) {
         scoreComments3.textContent = '惜しい！あと少し！';
-        img.src = "../image/oshii.png";
+        img.src = "image/oshii.png";
         img.classList.remove('score_image3');
         setTimeout(() => img.classList.add('score_image3'))
       } else if (total === 60 || total === 70) {
         scoreComments3.textContent = 'まあまあかな！';
-        img.src = "../image/bee.png";
+        img.src = "image/bee.png";
         img.classList.remove('score_image3');
         setTimeout(() => img.classList.add('score_image3'))
       } else {
         scoreComments3.textContent = 'まだまだだね';
-        img.src = "../image/guruguru.png";
+        img.src = "image/guruguru.png";
         img.classList.remove('score_image3');
         setTimeout(() => img.classList.add('score_image3'))
       }

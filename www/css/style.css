@@ -5,7 +5,7 @@ body {
   background: rgb(209, 244, 255);
   margin: 0 ;
   text-align: center;
-
+  background-image: url("../image/haikei3.png") !important;
 }
   
 
@@ -340,8 +340,5 @@ body {
   padding: 0;
   font-size: 30px;
 }
-
-
-
 
 
