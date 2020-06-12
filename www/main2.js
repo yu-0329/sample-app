@@ -52,16 +52,18 @@
     if (li.textContent === quizSet2[currentNum].c[0]) {
       li.classList.add();
       score++;
-      btn2.classList.remove('disabled');
+      // btn2.classList.remove('disabled');
       alert("正解！");
+      nextScore();
     } else {
       li.classList.add();
-      btn2.classList.remove('disabled');
+      // btn2.classList.remove('disabled');
       const currentNumQuiz = quizSet2[currentNum].c[0];
       alert("残念！\n正解は(" + currentNumQuiz + ")です。");
+      nextScore();
     }
 
-    btn2.classList.remove('disabled');
+    // btn2.classList.remove('disabled');
 
     // ここまでbtn2のやつ
   }
@@ -91,18 +93,18 @@
 
   // btn2の処理
 
-    if (currentNum === 4) {
-      btn2.textContent = 'Show Score';
-    }
+    // if (currentNum === 4) {
+    //   btn2.textContent = 'Show Score';
+    // }
   }
 
     setQuiz2();
 
-    btn2.addEventListener('click', () => {
-      if (btn2.classList.contains('disabled')) {
-        return;
-      }
-    btn2.classList.add('disabled');
+    function nextScore() {
+    //   if (btn2.classList.contains('disabled')) {
+    //     return;
+    //   }
+    // btn2.classList.add('disabled');
     
   // btn2の処理ここまで
 
@@ -140,6 +142,6 @@
       setQuiz2();
     }
 
-  });
+  };
     // ここまでが中級（quiz2.html）の問題
 }

@@ -44,13 +44,15 @@
       li.classList.add();
       score++;
       alert("正解！");
+      nextScore();
     } else {
       li.classList.add();
       const currentNumQuiz = quizSet3[currentNum].c[0];
       alert("残念！\n正解は(" + currentNumQuiz + ")です。");
+      nextScore();
     }
 
-    btn3.classList.remove('disabled');
+    // btn3.classList.remove('disabled');
   }
 
   function setQuiz3() {
@@ -74,18 +76,18 @@
       choices3.appendChild(li);
     });
 
-    if (currentNum === 4) {
-      btn3.textContent = 'Show Score';
-    }
+    // if (currentNum === 4) {
+    //   btn3.textContent = 'Show Score';
+    // }
   }
 
     setQuiz3();
 
-    btn3.addEventListener('click', () => {
-      if (btn3.classList.contains('disabled')) {
-        return;
-      }
-    btn3.classList.add('disabled');
+    function nextScore() {
+    //   if (btn3.classList.contains('disabled')) {
+    //     return;
+    //   }
+    // btn3.classList.add('disabled');
     
   
     if (currentNum === 4) {
@@ -122,6 +124,6 @@
       setQuiz3();
     }
 
-  });
+  };
 
 }

@@ -28,7 +28,7 @@ body {
   max-width: 100%;
   color: #555;
   font-size: 16px;
-  background: #dba5ff;
+  background: #dba5ffb4;
   border-radius: 15px;
   margin-top: 50px;
 }
@@ -40,7 +40,7 @@ body {
   left: 50%;
   margin-left: -15px;
   border: 15px solid transparent;
-  border-top: 15px solid #dba5ff;
+  border-top: 15px solid #dba5ffb4;
 }
 
 .balloon p {

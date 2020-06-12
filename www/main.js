@@ -10,7 +10,7 @@
   const result = document.getElementById('result');
   const modal = document.getElementById('modal');
   // const scoreLabel = document.querySelector('#result > p');
-  
+  console.log('aaa');
 
   const quizSet = shuffle([
     {q: 'このキャラクターの名前は何でしょう？', i: 'image/83067137.png', c: ['ポムポムプリン', 'トトロ', 'ボムボムヨーグルト']},
@@ -50,20 +50,22 @@
     if (li.textContent === quizSet[currentNum].c[0]) {
       li.classList.add();
       score++;
-      btn.classList.remove('disabled');
+      // btn.classList.remove('disabled');
       alert("正解！");
-      currentNum++;
-      setQuiz();
+      // currentNum++;
+      // setQuiz();
+      nextScore();
     } else {
       li.classList.add();
-      btn.classList.remove('disabled');
+      // btn.classList.remove('disabled');
       const currentNumQuiz = quizSet[currentNum].c[0];
       alert("残念！\n正解は(" + currentNumQuiz + ")です。");
-      currentNum++;
-      setQuiz();
+      // currentNum++;
+      // setQuiz();
+      nextScore();
     }
     
-    btn.classList.remove('disabled');
+    // btn.classList.remove('disabled');
     
   }
 
@@ -71,6 +73,7 @@
     isAnswered = false;
     question.textContent = quizSet[currentNum].q;
     questionImage.src = quizSet[currentNum].i;
+    console.log(currentNum);
     questionImage.classList.remove('question_image');
     setTimeout(() => questionImage.classList.add('question_image'));
 
@@ -88,18 +91,18 @@
       choices.appendChild(li);
     });
 
-    if (currentNum === 4) {
-      btn.textContent = 'Show Score';
-    }
+    // if (currentNum === 4) {
+    //   btn.textContent = 'Show Score';
+    // }
   }
 
     setQuiz();
 
-    btn.addEventListener('click', () => {
-      if (btn.classList.contains('disabled')) {
-        return;
-      }
-    btn.classList.add('hidden');
+    function nextScore() {
+      // if (btn.classList.contains('disabled')) {
+      //   return;
+      // }
+    // btn.classList.add('hidden');
     
   
     if (currentNum === 4) {
@@ -137,7 +140,7 @@
     }
 
 
-  });
+  };
 
   // ここまでが初級（quiz1.html）の問題
   
