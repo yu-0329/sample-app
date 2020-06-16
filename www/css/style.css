@@ -360,8 +360,8 @@ body {
 }
 
 .recommend {
-  margin-top: 100px;
-  font-size: 20px;
+  /* margin-top: 100px; */
+  font-size: 25px;
   background: #ffcdd2a2;
   position: relative;
   display: inline-block;
@@ -377,36 +377,35 @@ body {
 .recommend_sentence {
   background: #fff;
   margin: 0 auto;
-  border-radius: 15px;
   line-height: 30px;
-  font-size: 18px;
   position: relative;
   display: inline-block;
   padding: 7px 10px;
   min-width: 120px;
   max-width: 100%;
   color: #555;
-  font-size: 16px;
+  font-size: 17px;
   background: rgba(246, 200, 255, 0.438);
   border-radius: 15px;
-  
+  margin-bottom: 15px;
+  text-align: center;
 }
 
 .birthday {
   background: #fff;
   margin: 0 auto;
   margin-bottom: 50px;
-  border-radius: 15px;
-  font-size: 18px;
   position: relative;
   display: inline-block;
   padding: 7px 10px;
   min-width: 120px;
   max-width: 100%;
   color: #555;
-  font-size: 16px;
+  font-size: 17px;
   background: rgb(246, 200, 255, 0.438);
   border-radius: 15px;
+  text-align: center;
+}
 }
 
 .poyon {
@@ -421,4 +420,22 @@ body {
   75%  { transform: scale(0.9, 1.2) translate(0%, -20%); }
   85%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
   100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
+
+.rank {
+  font-size: 18px;
+  background: rgba(255, 255, 255, 0.644);
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  border-radius: 15px;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  
+
 }
