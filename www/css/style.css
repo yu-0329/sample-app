@@ -1,18 +1,25 @@
 /**/
+html {
+	/* min-height: 100%; */
+}
+
 
 body {
 
-  background: rgb(209, 244, 255);
+  /* background: rgb(209, 244, 255); */
   margin: 0 ;
   text-align: center;
-  background-image: url("../image/haikei3.png") !important;
+  /* background: -webkit-linear-gradient(#ffdaf093, #ffffff85), */
+  background-image: url("../image/haikei2.png") !important;
+  /* background-size: cover; */
+  
 }
   
 
 .name {
-  font-family: "メイリオ", "Droid Sans";
+  font-family: 'Century Gothic', "Droid Sans";
   text-align: center;
-  font-size: 45px;
+  font-size: 55px;
   margin-top: 150px;
   font-weight: bold;
   color: rgb(255, 218, 238);
@@ -28,7 +35,8 @@ body {
   max-width: 100%;
   color: #555;
   font-size: 16px;
-  background: #dba5ffb4;
+  /* background: #e5bdff8e; */
+  background: rgba(0, 0, 0, 0.158);
   border-radius: 15px;
   margin-top: 50px;
 }
@@ -40,7 +48,8 @@ body {
   left: 50%;
   margin-left: -15px;
   border: 15px solid transparent;
-  border-top: 15px solid #dba5ffb4;
+  /* border-top: 15px solid #e5bdff8e; */
+  border-top: 15px solid rgba(0, 0, 0, 0.158);
 }
 
 .balloon p {
@@ -125,7 +134,7 @@ body {
   content: ' ... wrong!';
 }
 
-#btn, #btn2, #btn3, #result > a, #result2 > a, #result3 > a {
+#btn, #btn2, #btn3, #result > a, #result2 > a, #result3 > a, .body > a {
   background: rgb(255, 198, 91);
   padding: 8px;
   border-radius: 4px;
@@ -133,6 +142,12 @@ body {
   text-align: center;
   color: #fff;
   box-shadow: 0 4px 0 orange;
+}
+
+
+
+.body > a {
+  margin-bottom: 100px;
 }
 
 #btn.disabled {
@@ -232,14 +247,15 @@ body {
   }
 
 #top > a {
-  background: rgb(255, 198, 91);
+  /* background: rgb(255, 198, 91); */
   padding: 8px;
   border-radius: 4px;
   cursor: pointer;
   text-align: center;
   color: #fff;
-  box-shadow: 0 4px 0 orange;
-  
+  /* box-shadow: 0 4px 0 orange; */
+  background: rgb(246, 200, 255);
+  box-shadow: 0 4px rgb(244, 122, 255);
 }
 
 .start {
@@ -255,6 +271,7 @@ body {
 #top > #intermediate {
   background: pink;
   box-shadow: 0 4px 0 rgb(255, 132, 153);
+  /* color: black; */
 }
 
 #top > #push_button {
@@ -263,6 +280,7 @@ body {
   margin: 0 auto;
   background: pink;
   box-shadow: 0 4px 0 rgb(255, 132, 153);
+  /* color: black; */
 }
 
 .score_image {
@@ -341,4 +359,66 @@ body {
   font-size: 30px;
 }
 
+.recommend {
+  margin-top: 100px;
+  font-size: 20px;
+  background: #ffcdd2a2;
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  border-radius: 15px;
+  font-weight: bold;
+}
 
+.recommend_sentence {
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 15px;
+  line-height: 30px;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: rgba(246, 200, 255, 0.438);
+  border-radius: 15px;
+  
+}
+
+.birthday {
+  background: #fff;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  font-size: 18px;
+  position: relative;
+  display: inline-block;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: rgb(246, 200, 255, 0.438);
+  border-radius: 15px;
+}
+
+.poyon {
+  animation: poyon 0.9s linear 0s 1;
+}
+@keyframes poyon {
+  0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+  10%  { transform: scale(1.1, 0.9) translate(0%, 5%); }
+  40%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
+  50%  { transform: scale(1.0, 1.0) translate(0%, 0%); }
+  60%  { transform: scale(0.9, 1.2) translate(0%, -100%); }
+  75%  { transform: scale(0.9, 1.2) translate(0%, -20%); }
+  85%  { transform: scale(1.2, 0.8) translate(0%, 15%); }
+  100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
