@@ -17,7 +17,7 @@ body {
   
 
 .name {
-  font-family: 'Century Gothic', "Droid Sans";
+  font-family: 'Century Gothic', "sans-serif";
   text-align: center;
   font-size: 55px;
   margin-top: 150px;
@@ -36,7 +36,7 @@ body {
   color: #555;
   font-size: 16px;
   /* background: #e5bdff8e; */
-  background: rgba(0, 0, 0, 0.158);
+  background: rgba(226, 161, 215, 0.349);
   border-radius: 15px;
   margin-top: 50px;
 }
@@ -49,7 +49,8 @@ body {
   margin-left: -15px;
   border: 15px solid transparent;
   /* border-top: 15px solid #e5bdff8e; */
-  border-top: 15px solid rgba(0, 0, 0, 0.158);
+  /* border-top: 15px solid rgba(0, 0, 0, 0.158); */
+ border-top: 15px solid rgba(226, 161, 215, 0.349);
 }
 
 .balloon p {
@@ -89,18 +90,18 @@ body {
   width: 100%;
 }
 
-#question, #question2, #question3 {
+#question, #question2, #question3, #question4 {
   margin-bottom: 16px;
   font-weight: bold;
 }
 
-#choices, #choices2, #choices3 {
+#choices, #choices2, #choices3, #choices4 {
   list-style: none;
   padding: 0;
   margin-bottom: 16px;
 }
 
-#choices > li, #choices2 > li, #choices3 > li {
+#choices > li, #choices2 > li, #choices3 > li, #choices4 > li {
   border: 1px solid #ccc;
   border-radius: 4px;
   padding: 10px;
@@ -108,33 +109,34 @@ body {
   cursor: pointer;
 }
 
-#choices > li:hover, #choices2 > li:hover, #choices3 > li:hover {
+#choices > li:hover, #choices2 > li:hover, #choices3 > li:hover, #choices4 > li:hover {
   background: #f8f8f8;
 }
 
-#choices > li.correct, #choices2 > li.correct, #choices3 > li.correct {
+#choices > li.correct, #choices2 > li.correct, #choices3 > li.correct, #choices4 > li.correct {
   background: #d4edda;
   border-color: #c3e6cb;
   color: #155724;
   font-weight: bold;
 }
 
-#choices > li.correct::after, #choices2 > li.correct::after, #choices3 > li.correct::after {
+/* #choices > li.correct::after, #choices2 > li.correct::after, #choices3 > li.correct::after, #choices4 > li.correct::after {
   content: ' ... correct!';
-}
+} */
 
-#choices > li.wrong, #choices2 > li.wrong, #choices3 > li.wrong {
+#choices > li.wrong, #choices2 > li.wrong, #choices3 > li.wrong, #choices4 > li.wrong {
   background: #f8d8da;
   border-color: #f5c6cb;
   color: #721c24;
   font-weight: bold;
 }
 
-#choices > li.wrong::after, #choices2 > li.wrong::after, #choices3 > li.wrong::after {
+/* #choices > li.wrong::after, #choices2 > li.wrong::after, #choices3 > li.wrong::after, #choices4 > li.wrong::after {
   content: ' ... wrong!';
-}
+} */
 
-#btn, #btn2, #btn3, #result > a, #result2 > a, #result3 > a, .body > a {
+/* スコアページのトップに戻るボタン */
+#btn, #btn2, #btn3, #result > a, #result2 > a, #result3 > a, #result4 > a, .body > a {
   background: rgb(255, 198, 91);
   padding: 8px;
   border-radius: 4px;
@@ -143,7 +145,7 @@ body {
   color: #fff;
   box-shadow: 0 4px 0 orange;
 }
-
+/* ここまで */
 
 
 .body > a {
@@ -156,7 +158,7 @@ body {
   opacity: 0.7;
 }
 
-#result, #result2, #result3 {
+#result, #result2, #result3, #result4 {
   position: absolute;
   width: 300px;
   background: #fff;
@@ -171,21 +173,21 @@ body {
   transition: 0.4s;
 }
 
-#result.hidden, #result2.hidden, #result3.hidden {
+#result.hidden, #result2.hidden, #result3.hidden, #result4.hidden {
   transform: translateY(-500px);
 }
 
-#result > p, #result2 > p, #result3 > p {
+#result > p, #result2 > p, #result3 > p, #result4 > p {
   font-size: 24px;
   margin: 0;
 }
 
-#result > a, #result2 > a, #result3 > a {
+#result > a, #result2 > a, #result3 > a, #result4 > a {
   display: block;
   text-decoration: none;
 }
 
-#result > #aaa, #result2 > #aaa2, #result3 > #aaa3 {
+#result > #aaa, #result2 > #aaa2, #result3 > #aaa3, #result4 > #aaa4 {
   font-size: 70px;
   font-weight: bold;
   margin: 0;
@@ -246,6 +248,25 @@ body {
     100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
   }
 
+  .question_image4 {
+    width: 50%;
+    height: auto;
+    animation: question_image4 1.2s linear 0.2s 1;
+  }
+
+  @keyframes question_image4 {
+    0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+    10%  { transform: scale(1.0, 1.0) translate(10%, 0%) skew(-10deg, 0deg); }
+    60%  { transform: scale(1.0, 1.0) translate(20%, 0%) skew(-20deg, 0deg); }
+    70%  { transform: scale(1.0, 1.0) translate(-15%, 0%) skew(15deg, 0deg); }
+    80%  { transform: scale(1.0, 1.0) translate(15%, 0%) skew(-15deg, 0deg); }
+    80%  { transform: scale(1.0, 1.0) translate(5%, 0%) skew(-5deg, 0deg); }
+    90%  { transform: scale(1.0, 1.0) translate(-5%, 0%) skew(5deg, 0deg); }
+    100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+  }
+
+
+
 #top > a {
   /* background: rgb(255, 198, 91); */
   padding: 8px;
@@ -268,7 +289,7 @@ body {
   margin-bottom: 15px;
 }
 
-#top > #intermediate {
+#top > #intermediate, #top > #most_difficult {
   background: pink;
   box-shadow: 0 4px 0 rgb(255, 132, 153);
   /* color: black; */
@@ -278,8 +299,10 @@ body {
   display: block;
   width: 200px;
   margin: 0 auto;
-  background: pink;
-  box-shadow: 0 4px 0 rgb(255, 132, 153);
+  /* background: pink; */
+  /* box-shadow: 0 4px 0 rgb(255, 132, 153); */
+  background: rgb(246, 200, 255);
+  box-shadow: 0 4px rgb(244, 122, 255);
   /* color: black; */
 }
 
@@ -320,6 +343,21 @@ body {
 }
 
 @keyframes score_image3 {
+  0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
+  20%  { transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
+  50%  { transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
+  65%  { transform: scale(1.0, 1.03) translate(2%, -2%) skew(-3deg, 0deg); }
+  80%  { transform: scale(1.0, 0.97) translate(-2%, 2%) skew(3deg, 0deg); }
+  100% { transform: scale(1.0, 1.0) translate(0%, 0%); }
+}
+
+.score_image4 {
+  width: 50%;
+  margin-bottom: 20px;
+  animation: score_image3 0.8s linear 0s 1;
+}
+
+@keyframes score_image4 {
   0%   { transform: scale(1.0, 1.0) translate(0%, 0%); }
   20%  { transform: scale(1.0, 1.06) translate(-5%, -4%) skew(6deg, 0deg); }
   50%  { transform: scale(1.0, 0.94) translate(5%, 4%) skew(-6deg, 0deg); }
@@ -406,7 +444,7 @@ body {
   border-radius: 15px;
   text-align: center;
 }
-}
+
 
 .poyon {
   animation: poyon 0.9s linear 0s 1;
