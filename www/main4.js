@@ -15,7 +15,7 @@
     {q: 'このキャラクターの名前は何でしょう？', i: 'image/kobuta.png', c: ['こぶたのピッポ', 'こぶたのブーちゃん', 'こぶたのハム']},
     {q: 'このキャラクターの名前は何でしょう？', i: 'image/korochan.png', c: ['コロちゃん', 'クマちゃん', 'クロちゃん']},
     {q: 'このキャラクターの名前は何でしょう？', i: 'image/koro.png', c: ['ころっぴ', 'けろっぴ', 'きろっぴ']},
-    // {q: 'このキャラクターの名前は何でしょう？', i: 'image/tako.png', c: ['チューチューターコ', 'チューチューユーコ', 'チューチューミーコ']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/pochi.PNG', c: ['ポチ', 'ワニ', 'タマ']},
     {q: 'このキャラクターの名前は何でしょう？', i:'image/poron.png', c: ['テルテルポロン', 'テルテルピロン', 'テルテルメロン']},
     {q: 'このキャラクターの名前は何でしょう？', i:'image/torisan.png', c: ['とりさん', 'ピーちゃん', 'ピー子さん']},
     {q: 'このキャラクターの名前は何でしょう？', i:'image/tuesday.png', c: ['チューズディ', 'ウェンズディ', 'サーズディ']},
@@ -23,6 +23,16 @@
     {q: 'このキャラクターの名前は何でしょう？', i:'image/nya.png', c: ['ニャニィニュニェニョン', 'カキクケコン', 'ミャミィミュミェミョン']},
     {q: 'このキャラクターの名前は何でしょう？', i:'image/mimi.png', c: ['ハローミミィ', 'ハローキティ', 'キティちゃん']},
     {q: 'このキャラクターの名前は何でしょう？', i:'image/sawara.png', c: ['さわらくん', 'きりみちゃん', 'さばくん']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/rosu.png', c: ['ロースちゃん', '豚肉ちゃん', 'ハムちゃん']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/goro.png', c: ['野垣ゴロー', '稲垣ゴロー', '宇垣ゴロー']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/sameo.png', c: ['小川サメオ', '小池サメオ', '大川サメオ']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/kaba.png', c: ['カバ恵', 'カバ美', 'カバ子']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/vanila.png', c: ['バニラ', 'シロップ', 'ホイップ']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/maimai.png', c: ['マイマイ', 'メイメイ', 'ミイミイ']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/shacho.png', c: ['社長', '村長', '店長']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/teradasan.png', c: ['寺田さん', '鈴木さん', '安澤さん']},
+    {q: 'このキャラクターの名前は何でしょう？', i:'image/adachi.png', c: ['アダチさん', 'タナカさん', 'ヨシダさん']},
+
   ]);
 
   let currentNum = 0;
@@ -113,12 +123,12 @@
       const scoreLabel4 = document.getElementById('aaa4');
       result4.classList.remove('hidden');
       // let total = Math.floor(score / quizSet.length * 100);
-      let total = Math.floor(score / (quizSet4.length / 2) * 100);
+      let total = Math.floor(score / (quizSet4.length / 4) * 100);
       scoreLabel4.textContent = total;
       const scoreComments4 = document.getElementById('score_comments4');
       const img4 = document.getElementById('score_image4');
       if (total === 100) {
-        scoreComments4.textContent = 'おめでとう！';
+        scoreComments4.textContent = 'すごい！おめでとう！天才！';
         img4.src = "image/ikiru.png";
         img4.classList.remove('score_image4');
         setTimeout(() => img4.classList.add('score_image4'))
