@@ -67,6 +67,7 @@
 
     // ここまでbtn2のやつ
   }
+  // document.getElementById("CSound").play();
 
   function setQuiz2() {
     isAnswered = false;
@@ -85,6 +86,7 @@
       li.textContent = choice;
       li.addEventListener('click', () => {
         checkAnswer(li);
+        // document.getElementById("CSound").play();
       });
       choices2.appendChild(li);
     });
@@ -107,6 +109,8 @@
     // btn2.classList.add('disabled');
     
   // btn2の処理ここまで
+
+    document.getElementById("CSound").play();
 
     if (currentNum === 4) {
       const scoreLabel2 = document.getElementById('aaa2');

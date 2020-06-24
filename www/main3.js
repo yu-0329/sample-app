@@ -90,6 +90,7 @@
     //   }
     // btn3.classList.add('disabled');
     
+    document.getElementById("CSound").play();
   
     if (currentNum === 4) {
       const scoreLabel = document.getElementById('aaa3');

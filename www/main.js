@@ -104,6 +104,7 @@
       // }
     // btn.classList.add('hidden');
     
+    document.getElementById("CSound").play();
   
     if (currentNum === 4) {
       const scoreLabel = document.getElementById('aaa');
@@ -139,7 +140,7 @@
       setQuiz();
     }
 
-
+    
   };
 
   // ここまでが初級（quiz1.html）の問題

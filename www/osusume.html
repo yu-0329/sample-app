@@ -12,10 +12,10 @@
   if (window.performance.navigation.type == 1) {
         window.location.href = 'index.html'
     }
-
+  
   var msg = new Array();
+  
   // 設定開始（メッセージの内容を設定してください）
-
   msg[0] = '<p class="recommend">マイメロディ</p><p class="rank">2020年サンリオキャラクター大賞4位</p><br><img src="image/mymelody2.png" width="50%" height="auto" class="poyon"><br><p class="recommend_sentence">すなおで明るい、弟思いの女のコ。宝物は、おばあちゃんが作ってくれた、かわいいずきん。お母さんといっしょにクッキーを焼くのが好きで、好きな食べ物は、アーモンドパウンドケーキ 。</p><p class="birthday">誕生日：1月18日</p>';
   msg[1] = '<p class="recommend">バッドばつ丸</p><p class="rank">2020年サンリオキャラクター大賞14位</p><br><img src="image/batumaru3.png" width="50%" height="auto" class="poyon"><br><p class="recommend_sentence">いたずら好きで、あまのじゃくなペンギンの男のコ。好きな食べ物は、銀座の高級お寿司とポリパリラーメン。パパはギャングのボスで、ママはチョー教育ママ。悪役スターのブロマイドを集めている。将来の夢は、社長になること。ひねくれ者に見えるけど本当はイイヤツ？</p><p class="birthday">誕生日：4月1日（エイプリルフール）</p>';
   msg[2] = '<p class="recommend">シナモン</p><p class="rank">2020年サンリオキャラクター大賞1位</p><br><img src="image/shinamon2.png" width="50%" height="auto" class="poyon"><br><p class="recommend_sentence">遠いお空の雲の上で生まれた、白いこいぬの男の子。特技は、大きな耳をパタパタさせて、空を飛ぶこと。</p><p class="birthday">誕生日：3月6日</p>';
@@ -125,11 +125,12 @@
 
   // 設定終了
 
-
   var no = Math.floor(Math.random() * msg.length);
+
 
   // 表示開始
   document.write(msg[no]);
+  
 </script>
 
 <title>名前当てクイズ</title>
@@ -138,12 +139,15 @@
     <br>
     <a href="index.html" id="bbb4" style="text-decoration: none;">トップに戻る</a>
     
-
+    <audio id="CSound" preload="auto">
+      <source src="kira1.mp3" type="audio/mp3">
+      <!-- <p>音声を再生するには、audioタグをサポートしたブラウザが必要です。</p> -->
+    </audio>
     <!-- <section id="result4" class="hidden">
       <a href="index.html" id="bbb4">トップに戻る</a>
     </section>  -->
   
-    <script src="main4.js"></script>
+    <!-- <script src="main4.js"></script> -->
   
   
 </body>
